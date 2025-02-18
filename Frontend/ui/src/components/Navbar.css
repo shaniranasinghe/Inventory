@@ -1,0 +1,83 @@
+/* Navbar Container */
+.navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background-color: #006400 !important; /* Dark green background */
+    padding: 10px 20px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important; /* Slightly stronger shadow */
+    border-bottom: 2px solid #004d00 !important; /* Slightly darker green border for added definition */
+}
+
+/* Logo */
+.navbar .logo {
+    color: #ffffff !important; /* White text for the logo */
+    font-size: 1.6em !important; /* Slightly larger font size */
+    font-weight: bold !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important; /* Smooth transition */
+}
+
+.navbar .logo:hover {
+    color: #d0f0c0 !important; /* Light green on hover */
+}
+
+/* Navbar Links */
+.navbar .nav-links {
+    display: flex !important;
+    gap: 20px !important;
+}
+
+.navbar .nav-links a {
+    color: #ffffff !important; /* White text for links */
+    text-decoration: none !important;
+    font-size: 1em !important;
+    transition: color 0.3s ease, transform 0.3s ease !important; /* Smooth transitions */
+}
+
+.navbar .nav-links a:hover {
+    color: #d0f0c0 !important; /* Light green on hover */
+    transform: translateY(-2px) !important; /* Subtle lift on hover */
+}
+
+.navbar .nav-links a.home-btn:hover {
+    background-color: #ffff00 !important; /* Yellow background on hover */
+}
+
+/* Responsive Burger Menu for Mobile */
+.navbar .burger {
+    display: none !important; /* Hidden by default */
+    flex-direction: column !important;
+    gap: 5px !important;
+}
+
+.navbar .burger div {
+    width: 30px !important;
+    height: 4px !important;
+    background-color: #ffffff !important; /* White lines for the burger menu */
+    border-radius: 2px !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.navbar .burger:hover div {
+    background-color: #d0f0c0 !important; /* Light green on hover */
+}
+
+/* Show Burger Menu on Mobile */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none !important; /* Hide links on small screens */
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 10px 0 !important;
+        background-color: #004d00 !important; /* Darker green background for dropdown */
+    }
+
+    .navbar .burger {
+        display: flex !important; /* Show burger menu on small screens */
+    }
+
+    .navbar.open .nav-links {
+        display: flex !important; /* Show links when menu is open */
+    }
+}

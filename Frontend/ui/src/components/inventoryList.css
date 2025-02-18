@@ -1,0 +1,44 @@
+/* Container for the Inventory List */
+.Show_InventoryList .container {
+  padding: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-top: 50px; /* Gap between navbar and search bar */
+  margin-bottom: 20px; /* Space between search bar and inventory list */
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Button in the Top Right Corner */
+.top-right-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: #0a3e07; /* Dark green background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top-right-button:hover {
+  background-color: #FFD700; /* Yellow background on hover */
+  color: white; /* White text on hover */
+}
+
+/* List of Inventory Items */
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Reduced gap between cards */
+}
